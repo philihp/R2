@@ -10,6 +10,8 @@
 		2E6186EC1EC7D32500E999AF /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6186EB1EC7D32500E999AF /* EventMonitor.swift */; };
 		2E6186EE1EC7E57800E999AF /* SinePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6186ED1EC7E57800E999AF /* SinePlayer.swift */; };
 		2E6186F01EC8006400E999AF /* Tone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6186EF1EC8006400E999AF /* Tone.swift */; };
+		2E6186F21EC9276500E999AF /* MidiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6186F11EC9276500E999AF /* MidiPlayer.swift */; };
+		2E6186F41EC9294C00E999AF /* gs_instruments.dls in Resources */ = {isa = PBXBuildFile; fileRef = 2E6186F31EC9294600E999AF /* gs_instruments.dls */; };
 		2E66ED211EC7D0FB00FECB44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66ED201EC7D0FB00FECB44 /* AppDelegate.swift */; };
 		2E66ED231EC7D0FB00FECB44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66ED221EC7D0FB00FECB44 /* ViewController.swift */; };
 		2E66ED251EC7D0FB00FECB44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E66ED241EC7D0FB00FECB44 /* Assets.xcassets */; };
@@ -20,7 +22,9 @@
 		2E6186EB1EC7D32500E999AF /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		2E6186ED1EC7E57800E999AF /* SinePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinePlayer.swift; sourceTree = "<group>"; };
 		2E6186EF1EC8006400E999AF /* Tone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tone.swift; sourceTree = "<group>"; };
-		2E66ED1D1EC7D0FB00FECB44 /* r2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = r2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6186F11EC9276500E999AF /* MidiPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidiPlayer.swift; sourceTree = "<group>"; };
+		2E6186F31EC9294600E999AF /* gs_instruments.dls */ = {isa = PBXFileReference; lastKnownFileType = file; path = gs_instruments.dls; sourceTree = "<group>"; };
+		2E66ED1D1EC7D0FB00FECB44 /* R2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E66ED201EC7D0FB00FECB44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E66ED221EC7D0FB00FECB44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2E66ED241EC7D0FB00FECB44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +54,7 @@
 		2E66ED1E1EC7D0FB00FECB44 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E66ED1D1EC7D0FB00FECB44 /* r2.app */,
+				2E66ED1D1EC7D0FB00FECB44 /* R2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +62,7 @@
 		2E66ED1F1EC7D0FB00FECB44 /* r2 */ = {
 			isa = PBXGroup;
 			children = (
+				2E6186F31EC9294600E999AF /* gs_instruments.dls */,
 				2E66ED201EC7D0FB00FECB44 /* AppDelegate.swift */,
 				2E66ED221EC7D0FB00FECB44 /* ViewController.swift */,
 				2E66ED241EC7D0FB00FECB44 /* Assets.xcassets */,
@@ -66,6 +71,7 @@
 				2E6186EB1EC7D32500E999AF /* EventMonitor.swift */,
 				2E6186ED1EC7E57800E999AF /* SinePlayer.swift */,
 				2E6186EF1EC8006400E999AF /* Tone.swift */,
+				2E6186F11EC9276500E999AF /* MidiPlayer.swift */,
 			);
 			path = r2;
 			sourceTree = "<group>";
@@ -73,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2E66ED1C1EC7D0FB00FECB44 /* r2 */ = {
+		2E66ED1C1EC7D0FB00FECB44 /* R2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E66ED2C1EC7D0FB00FECB44 /* Build configuration list for PBXNativeTarget "r2" */;
+			buildConfigurationList = 2E66ED2C1EC7D0FB00FECB44 /* Build configuration list for PBXNativeTarget "R2" */;
 			buildPhases = (
 				2E66ED191EC7D0FB00FECB44 /* Sources */,
 				2E66ED1A1EC7D0FB00FECB44 /* Frameworks */,
@@ -85,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = r2;
+			name = R2;
 			productName = r2;
-			productReference = 2E66ED1D1EC7D0FB00FECB44 /* r2.app */;
+			productReference = 2E66ED1D1EC7D0FB00FECB44 /* R2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E66ED1C1EC7D0FB00FECB44 /* r2 */,
+				2E66ED1C1EC7D0FB00FECB44 /* R2 */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E66ED251EC7D0FB00FECB44 /* Assets.xcassets in Resources */,
+				2E6186F41EC9294C00E999AF /* gs_instruments.dls in Resources */,
 				2E66ED281EC7D0FB00FECB44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +151,7 @@
 				2E6186EC1EC7D32500E999AF /* EventMonitor.swift in Sources */,
 				2E66ED231EC7D0FB00FECB44 /* ViewController.swift in Sources */,
 				2E6186F01EC8006400E999AF /* Tone.swift in Sources */,
+				2E6186F21EC9276500E999AF /* MidiPlayer.swift in Sources */,
 				2E66ED211EC7D0FB00FECB44 /* AppDelegate.swift in Sources */,
 				2E6186EE1EC7E57800E999AF /* SinePlayer.swift in Sources */,
 			);
@@ -299,7 +307,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E66ED2C1EC7D0FB00FECB44 /* Build configuration list for PBXNativeTarget "r2" */ = {
+		2E66ED2C1EC7D0FB00FECB44 /* Build configuration list for PBXNativeTarget "R2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E66ED2D1EC7D0FB00FECB44 /* Debug */,

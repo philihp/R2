@@ -14,13 +14,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   var monitor: EventMonitor?
   let sinePlayer = SinePlayer()
+  let midiPlayer = MidiPlayer()
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     trust()
     monitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown, .keyDown, .keyUp]) { (event) in
-      //self.sinePlayer.tone =  round(Float(arc4random()) / Float(UINT32_MAX) * 500) + 300
-      self.sinePlayer.tone = Tone.rand().rawValue
-      
+
+      // using the sine player, you get annoying little pops at the end and beginning of all of the samples.
+      //self.sinePlayer.tone = Tone.rand().rawValue
+      let tone = UInt8(arc4random_uniform(128))
+      self.midiPlayer.sampler.startNote(tone, withVelocity: 64, onChannel: 0)
     }
     monitor?.start()
   }
