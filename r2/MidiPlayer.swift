@@ -24,13 +24,12 @@ class MidiPlayer {
       return
     }
 
-    let melodicBank:UInt8 = UInt8(kAUSampler_DefaultMelodicBankMSB)
-    let gmPiano:UInt8 = 5
-
+    let patch:UInt8 = 81
+    let bank:UInt8 = UInt8(kAUSampler_DefaultBankLSB)//UInt8(kAUSampler_DefaultMelodicBankMSB)//
     do {
 
       try engine.start()
-      try self.sampler.loadSoundBankInstrument(at: soundbank, program: gmPiano, bankMSB: melodicBank, bankLSB: 0)
+      try self.sampler.loadSoundBankInstrument(at: soundbank, program: patch, bankMSB: bank, bankLSB: 0)
 
     } catch {
       print("An error occurred \(error)")
